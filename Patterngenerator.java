@@ -95,6 +95,9 @@ public class Patterngenerator {
     // Prints an upside-down pyramid of repeated numbers.
     public static void pyramid(int rows) {
         for (int i = 1; i <= rows; i++) {
+             for (int s = 0; s < i; s++) {
+            System.out.print(" ");
+        }
             int count = (rows - i + 1) * 2 - 1;
             for (int j = 0; j < count; j++) {
                 System.out.print(i);
@@ -106,10 +109,10 @@ public class Patterngenerator {
     // Main method to test all the pattern functions.
     public static void main(String[] args) {
         System.out.println("Testing stars:");
-        stars(4);
+        stars(7);
 
         System.out.println("\nTesting triangle:");
-        triangle(5);
+        triangle(9);
 
         System.out.println("\nTesting odds:");
         odds(9);
