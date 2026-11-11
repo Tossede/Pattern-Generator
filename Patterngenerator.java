@@ -4,7 +4,8 @@
 
 public class Patterngenerator {
 
-    // Prints rows of stars that grow larger using a while loop.
+    // Pre-condition: rows is a positive integer.
+    // Post-condition: Prints rows of stars that grow larger using a while loop.
     public static void stars (int rows) {
         int i = 1;
         while (i <= rows) {
@@ -19,7 +20,8 @@ public class Patterngenerator {
         }
     }
 
-    // Prints a number triangle where each row repeats its row number.
+    // Pre-condition: rows is a positive integer.
+    // Post-condition: Prints a number triangle where each row repeats its row number.
     public static void triangle(int rows) {
         int i = 1;
         while (i <= rows) {
@@ -33,7 +35,8 @@ public class Patterngenerator {
         }
     }
 
-    // Prints decreasing odd numbers starting from the given start value.
+    // Pre-condition: start is a positive odd integer.
+    // Post-condition: Prints decreasing odd numbers starting from the given start value.
     public static void odds(int start) {
         for (int i = start; i >= 1; i -= 2) {
             for (int j = 0; j < i; j++) {
@@ -43,7 +46,8 @@ public class Patterngenerator {
         }
     }
 
-    // Prints a diamond shape that alternates between the letters E and O.
+    // Pre-condition: maxE is a positive integer.
+    // Post-condition: Prints a diamond shape that alternates between the letters E and O.
     public static void eo(int maxE) {
         // Top half of the pattern
         for (int i = 1; i <= maxE; i++) {
@@ -92,12 +96,10 @@ public class Patterngenerator {
         }
     }
 
-    // Prints an upside-down pyramid of repeated numbers.
+    // Pre-condition: rows is a positive integer.
+    // Post-condition: Prints an upside-down pyramid of repeated numbers.
     public static void pyramid(int rows) {
         for (int i = 1; i <= rows; i++) {
-             for (int s = 0; s < i; s++) {
-            System.out.print(" ");
-        }
             int count = (rows - i + 1) * 2 - 1;
             for (int j = 0; j < count; j++) {
                 System.out.print(i);
@@ -106,13 +108,14 @@ public class Patterngenerator {
         }
     }
 
-    // Main method to test all the pattern functions.
+    // Pre-condition: None.
+    // Post-condition: Tests all pattern methods with sample arguments.
     public static void main(String[] args) {
         System.out.println("Testing stars:");
-        stars(7);
+        stars(4);
 
         System.out.println("\nTesting triangle:");
-        triangle(9);
+        triangle(5);
 
         System.out.println("\nTesting odds:");
         odds(9);
